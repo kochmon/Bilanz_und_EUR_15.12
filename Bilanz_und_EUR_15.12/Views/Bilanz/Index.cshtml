@@ -1,0 +1,23 @@
+﻿@model List<Bilanz>
+
+<h1>Bilanzen</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Erstellungsdatum</th>
+            <!-- Weitere Spalten entsprechend den Bilanzattributen -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bilanz in Model)
+        {
+            <tr>
+                <td>@bilanz.Id</td>
+                <td>@bilanz.ErstellungsDatum.ToShortDateString()</td>
+                <!-- Weitere Spalten entsprechend den Bilanzattributen -->
+            </tr>
+        }
+    </tbody>
+</table>
